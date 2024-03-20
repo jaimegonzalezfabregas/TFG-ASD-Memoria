@@ -1,0 +1,15 @@
+@startuml
+
+skinparam componentStyle rectangle
+
+database backend
+
+actor profesor
+
+[profesor] -> [frontend]
+[frontend] -down-> [backend] : REST
+[thingsboard] -up-> [backend] : REST
+[ESP32] -> [thingsboard] : MQTT
+
+
+@enduml
